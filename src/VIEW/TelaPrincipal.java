@@ -17,44 +17,42 @@ public class TelaPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        calendarPanel1 = new com.github.lgooddatepicker.components.CalendarPanel();
+        jSeparator1 = new javax.swing.JSeparator();
         lblDataAtual = new javax.swing.JLabel();
-        jMenuBar1 = new javax.swing.JMenuBar();
+        dateSeparator = new javax.swing.JSeparator();
+        menuBar = new javax.swing.JMenuBar();
         menuArquivo = new javax.swing.JMenu();
+        itemAgendamento = new javax.swing.JMenuItem();
         itemImprimir = new javax.swing.JMenuItem();
         menuAjuda = new javax.swing.JMenu();
         itemSobre = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Agenda - Menu Principal");
 
         lblDataAtual.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        lblDataAtual.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
+        lblDataAtual.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         lblDataAtual.setText(getDataAtual());
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblDataAtual, javax.swing.GroupLayout.DEFAULT_SIZE, 388, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(lblDataAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(231, Short.MAX_VALUE))
-        );
 
         menuArquivo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/.images/.icons/icon_folder_page.png"))); // NOI18N
         menuArquivo.setText("Arquivo");
+
+        itemAgendamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/.images/.icons/icon_add.png"))); // NOI18N
+        itemAgendamento.setText("Novo Agendamento");
+        itemAgendamento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemAgendamentoActionPerformed(evt);
+            }
+        });
+        menuArquivo.add(itemAgendamento);
 
         itemImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/.images/.icons/icon_print.png"))); // NOI18N
         itemImprimir.setText("Imprimir...");
         menuArquivo.add(itemImprimir);
 
-        jMenuBar1.add(menuArquivo);
+        menuBar.add(menuArquivo);
 
         menuAjuda.setIcon(new javax.swing.ImageIcon(getClass().getResource("/.images/.icons/icon_help.png"))); // NOI18N
         menuAjuda.setText("Ajuda");
@@ -63,23 +61,42 @@ public class TelaPrincipal extends javax.swing.JFrame {
         itemSobre.setText("Sobre");
         menuAjuda.add(itemSobre);
 
-        jMenuBar1.add(menuAjuda);
+        menuBar.add(menuAjuda);
 
-        setJMenuBar(jMenuBar1);
+        setJMenuBar(menuBar);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(lblDataAtual, javax.swing.GroupLayout.DEFAULT_SIZE, 638, Short.MAX_VALUE)
+                    .addComponent(dateSeparator))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(lblDataAtual, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dateSeparator, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(427, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void itemAgendamentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemAgendamentoActionPerformed
+        
+        TelaAgendamento telaAgendamento = new TelaAgendamento();
+        
+        telaAgendamento.setLocationRelativeTo(null);
+        
+        telaAgendamento.setVisible(true);
+    }//GEN-LAST:event_itemAgendamentoActionPerformed
 
 
     /*public static void main(String args[]) {
@@ -110,12 +127,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private com.github.lgooddatepicker.components.CalendarPanel calendarPanel1;
+    private javax.swing.JSeparator dateSeparator;
+    private javax.swing.JMenuItem itemAgendamento;
     private javax.swing.JMenuItem itemImprimir;
     private javax.swing.JMenuItem itemSobre;
-    private javax.swing.JMenuBar jMenuBar1;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lblDataAtual;
     private javax.swing.JMenu menuAjuda;
     private javax.swing.JMenu menuArquivo;
+    private javax.swing.JMenuBar menuBar;
     // End of variables declaration//GEN-END:variables
 }

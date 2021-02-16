@@ -27,7 +27,7 @@ public class FormLogin extends javax.swing.JFrame {
         txtPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-        setTitle("Agendamento - Login");
+        setTitle("Agenda - Login");
         setName("frameLogin"); // NOI18N
         setResizable(false);
 
@@ -161,6 +161,7 @@ public class FormLogin extends javax.swing.JFrame {
             public void run() {
                 FormLogin telaLogin = new FormLogin();
                 telaLogin.setLocationRelativeTo(null);
+                telaLogin.setTitle("Agendamento - Login");
                 telaLogin.setVisible(true);
             }
         });
@@ -192,7 +193,6 @@ public class FormLogin extends javax.swing.JFrame {
                 //Caso ocorra erro de autenticação.
                 JOptionPane.showMessageDialog(null, "Usuário ou senha inválida...");
                 
-                txtUser.setText("");
                 txtPassword.setText("");
             }
         } catch (SQLException error) {
