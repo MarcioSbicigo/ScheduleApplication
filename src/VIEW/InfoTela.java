@@ -30,6 +30,7 @@ public class InfoTela extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Sobre");
         setName("infoFrame"); // NOI18N
+        setResizable(false);
 
         lblImageLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblImageLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/.images/schedule.png"))); // NOI18N

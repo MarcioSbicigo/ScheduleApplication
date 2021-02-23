@@ -30,6 +30,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agenda - Menu Principal");
+        setResizable(false);
 
         lblDataAtual.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblDataAtual.setFont(new java.awt.Font("Dialog", 1, 28)); // NOI18N
