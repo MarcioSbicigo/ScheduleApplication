@@ -59,6 +59,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         itemSobre.setIcon(new javax.swing.ImageIcon(getClass().getResource("/.images/.icons/icon_information.png"))); // NOI18N
         itemSobre.setText("Sobre");
+        itemSobre.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                itemSobreActionPerformed(evt);
+            }
+        });
         menuAjuda.add(itemSobre);
 
         menuBar.add(menuAjuda);
@@ -97,6 +102,14 @@ public class TelaPrincipal extends javax.swing.JFrame {
         
         telaAgendamento.setVisible(true);
     }//GEN-LAST:event_itemAgendamentoActionPerformed
+
+    private void itemSobreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_itemSobreActionPerformed
+        InfoTela telaSobre = new InfoTela();
+        
+        telaSobre.setLocationRelativeTo(null);
+        
+        telaSobre.setVisible(true);
+    }//GEN-LAST:event_itemSobreActionPerformed
 
 
     /*public static void main(String args[]) {
